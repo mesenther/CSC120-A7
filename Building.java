@@ -23,6 +23,11 @@ public class Building {
         this(name, address, 1); // Call full constructor with hard-coded # floors
     }
 
+    /* Overloaded constructor with name, floors (called by overloaded constructors in subclasses) */
+    public Building(String name, int nFloors) {
+        this(name, "<Address Unknown>", nFloors);
+    }
+
     /* Full constructor */
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
